@@ -13,10 +13,10 @@ export default function Signup() {
     } = useForm()
 
     const onSubmit = (data) => {
-        if (data.Password !== data.confirmPassword) {
-            toast.error("Password and confirm Password mismatch")
-            return;
-        }
+        // if (data.Password !== data.confirmPassword) {
+        //     toast.error("Password and confirm Password mismatch")
+        //     return;
+        // }
 
         const users = JSON.parse(localStorage.getItem("Users")) || []
 
@@ -36,11 +36,11 @@ export default function Signup() {
 
 
     return (
-        <div className="flex flex-col md:flex-row min-h-screen">
+        <div className="flex flex-col md:flex-row min-h-screen overflow-hidden">
             <Toaster />
 
-            {/* Image Section - Upar on mobile, left on desktop */}
-            <div className="w-full md:w-1/2 h-[250px] md:h-auto object-cover order-1 md:order-1">
+            {/* Image Section*/}
+            <div className="md:block md:w-1/2 h-screen h-screen">
                 <img 
                     src={SidebarNav} 
                     alt="Sidebar" 
@@ -49,15 +49,15 @@ export default function Signup() {
             </div>
 
             {/* Form Section*/}
-            <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0 order-2 md:order-2">
+            <div className="w-full md:w-1/2 flex justify-center items-center h-screen overflow-y-auto py-8 md:py-0 order-2 md:order-2">
                 <div className="px-4 sm:px-6 md:px-0 md:ml-[72px] md:mr-[73px] w-full max-w-lg mx-auto md:mx-0">
-                    <div className="flex flex-col gap-[40px]">
+                    <div className="flex flex-col gap-[16px]">
                         <h1 className="text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-center md:text-left">
                             Create New Account
                         </h1>
                         
                         <div className="flex flex-col gap-[24px]">
-                            <form className="flex flex-col gap-[24px]" onSubmit={handleSubmit(onSubmit)}>
+                            <form className="flex flex-col gap-[16px]" onSubmit={handleSubmit(onSubmit)}>
 
                                 {/* Full Name */}
                                 <div className="flex flex-col gap-[10px]">
@@ -66,7 +66,7 @@ export default function Signup() {
                                         type="text"
                                         placeholder='Enter your FullName'
                                         autoComplete='off'
-                                        className="text-base w-full h-[56px] sm:h-[64px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
+                                        className="text-base w-full h-[56px] sm:h-[48px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
                                         {...register("FullName", {
                                             required: "Full Name is required",
                                             minLength: {value: 3, message: "Invalid name format"},
@@ -86,7 +86,7 @@ export default function Signup() {
                                         type="email"
                                         placeholder='Enter your email'
                                         autoComplete='off'
-                                        className="text-base w-full h-[56px] sm:h-[64px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
+                                        className="text-base w-full h-[56px] sm:h-[48px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
                                         {...register("Email", {
                                             required: "Email is required",
                                             minLength: {value: 3, message: "Email must be in proper format"},
@@ -106,7 +106,7 @@ export default function Signup() {
                                         type="password"
                                         placeholder='Enter your Password'
                                         autoComplete='off'
-                                        className="text-base w-full h-[56px] sm:h-[64px] px-4 py-3 border rounded-[8px] border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
+                                        className="text-base w-full h-[56px] sm:h-[48px] px-4 py-3 border rounded-[8px] border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
                                         {...register("Password", {
                                             required: "Password is required",
                                             minLength: {value: 3, message: "Password length must be greater than 3"},
@@ -119,7 +119,7 @@ export default function Signup() {
                                     {errors.Password && <p className="text-red-500 text-sm mt-1">{errors.Password.message}</p>}
                                 </div>
 
-                                {/* Confirm Password */}
+                                {/* Confirm Password
                                 <div className="flex flex-col gap-[10px]">
                                     <label className="text-[16px] sm:text-[18px] font-medium">Confirm Password</label>
                                     <input 
@@ -137,7 +137,7 @@ export default function Signup() {
                                         })}
                                     />
                                     {errors.confirmPassword && <p className="text-red-500 text-sm mt-1">{errors.confirmPassword.message}</p>}
-                                </div>
+                                </div> */}
                             </form>
 
                             <div className="flex flex-col gap-[32px] justify-start">
@@ -184,7 +184,7 @@ export default function Signup() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col justify-center mt-[40px] md:mt-[64px] gap-[24px]">
+                    <div className="flex flex-col justify-center mt-[40px] md:mt-[24px] gap-[24px]">
                         <div className="flex justify-center">
                             <button
                                 disabled={isSubmitting}

@@ -39,21 +39,21 @@ export default function Login() {
     }
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen overflow-hidden">
             <div className={`flex flex-col md:flex-row min-h-screen transition-all duration-300 ${isModalOpen ? 'blur-sm pointer-events-none' : ''}`}>
                 <Toaster />
 
                 {/* Image */}
-                <div className="w-full md:w-1/2 h-[250px] md:h-auto object-cover order-1 md:order-1">
+                <div className="w-full md:w-1/2 h-[250px] h-screen">
                     <img 
                         src={SidebarNav} 
                         alt="Sidebar" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                     />
                 </div>
 
                 {/* Form */}
-                <div className="w-full md:w-1/2 flex justify-center items-center py-8 md:py-0 order-2 md:order-2">
+                <div className="w-full md:w-1/2 flex justify-center items-center overflow-y-auto h-full items-center md:py-18 order-2 md:order-2">
                     <div className="px-4 sm:px-6 md:px-0 md:ml-[72px] md:mr-[73px] w-full max-w-lg mx-auto md:mx-0">
                         <div className="flex flex-col gap-[40px]">
                             <h1 className="text-[28px] sm:text-[32px] md:text-[36px] font-semibold text-center md:text-left">
@@ -70,7 +70,7 @@ export default function Login() {
                                             type="email"
                                             placeholder='Enter your email'
                                             autoComplete='off'
-                                            className="text-base w-full h-[56px] sm:h-[64px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
+                                            className="text-base w-full h-[56px] sm:h-[56px] px-4 py-3 border border-gray-300 rounded-[8px] focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
                                             {...register("Email", {
                                                 required: "Email is required",
                                                 minLength: {value: 3, message: "Email must be in proper format"},
@@ -90,7 +90,7 @@ export default function Login() {
                                             type="password"
                                             placeholder='Enter your Password'
                                             autoComplete='off'
-                                            className="text-base w-full h-[56px] sm:h-[64px] px-4 py-3 border rounded-[8px] border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
+                                            className="text-base w-full h-[56px] sm:h-[56px] px-4 py-3 border rounded-[8px] border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#7E57C2] focus:border-transparent"
                                             {...register("Password", {
                                                 required: "Password is required",
                                                 minLength: {value: 3, message: "Password length must be greater than 3"},
