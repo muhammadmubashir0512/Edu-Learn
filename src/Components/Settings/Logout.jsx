@@ -114,7 +114,7 @@ const Logout = () => {
                   <div className='w-full sm:w-1/2 justify-center text-center'>
                     <button 
                       onClick={handleSubmit(onSubmit)}
-                      className='cursor-pointer w-full bg-[#FF0000] cursor-pointer border rounded-[8px] h-[56px] sm:h-[64px] text-white text-[16px] sm:text-[20px] font-medium' disabled={isSubmitting}>{isSubmitting ? "Submitting" : "Update Password"}</button>
+                      className='cursor-pointer w-full bg-[#FF0000] cursor-pointer border rounded-[8px] h-[56px] sm:h-[64px] text-white text-[16px] sm:text-[20px] font-medium' disabled={isSubmitting}>{isSubmitting ? "Submitting" : "Logout"}</button>
                   </div>
 
                 </div>

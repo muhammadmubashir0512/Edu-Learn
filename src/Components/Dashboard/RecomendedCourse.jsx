@@ -37,10 +37,14 @@ const RecomendedCourses = (props) => {
       )
     }
 
-    const AddCourse = () =>{
-      const course = JSON.parse(localStorage.getItem("AllCourses")) || []
-      const updateCourses = [...course, recomedCourse]
-      localStorage.setItem("AllCourses", JSON.stringify(updateCourses))
+    const AddCourse = (singleCourse) =>{
+      const allcourse = JSON.parse(localStorage.getItem("AllCourses")) || []
+
+      const existes = allcourse.some(c => c.id === singleCourse.id)
+      if (!existes) {
+        const updateCourses = [...allcourse, singleCourse]
+        localStorage.setItem("AllCourses", JSON.stringify(updateCourses))
+      }
     }
 
   return (
@@ -108,7 +112,7 @@ const RecomendedCourses = (props) => {
                     {/* Enroll Button */}
                     <button 
                       onClick={()=>{
-                        AddCourse(),
+                        AddCourse(course),
                         course.price === "Free" 
                           ? navigate(`/CourseInfo/${course.id}`) 
                           : toast.error(`Subscribe to access Course ${course.title}`)
