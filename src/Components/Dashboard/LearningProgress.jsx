@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Htmlcourse from '../../assets/LearningProgess/Htmlcourse.png'
-import MachineLearn from '../../assets/LearningProgess/MachineLearn.png'
-import Mobile from '../../assets/LearningProgess/Mobile.png'
+import MachineLearn from '../../assets/LearningProgess/MachineLearn.jpg'
+import Mobile from '../../assets/LearningProgess/Mobile.jpg'
 import Live from '../../assets/LearningProgess/Live.png'
 import video from "../../assets/LearningProgess/video.jpg"
 import CourseInfo from '../Courses/CoursesInfo'

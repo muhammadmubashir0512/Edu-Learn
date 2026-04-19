@@ -1,7 +1,7 @@
 import React from 'react'
-import FullStack from '../../assets/RecomCourses/FullStack.png'
-import Javascript from '../../assets/RecomCourses/Javascript.png'
-import Animation from '../../assets/RecomCourses/Animation.png'
+import FullStack from '../../assets/RecomCourses/FullStack.jpg'
+import Javascript from '../../assets/RecomCourses/Javascript.jpg'
+import Animation from '../../assets/RecomCourses/Animation.jpg'
 
 const CompletedCourse = (props) => {
 

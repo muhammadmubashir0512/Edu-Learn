@@ -52,14 +52,14 @@ const SubscriptionPlan = () => {
         />
       )}
       
-      <div className='flex-1 w-full min-w-0'>
+      <div className='flex-1 min-w-0  h-screen overflow-y-auto'>
 
         <NavbarSearch 
           setSearchTerms={setSearchTerms}
           onMobileMenuClick={() => setIsSidebarOpen(!isSidebarOpen)}
         />
 
-        <div className='flex flex-col gap-[32px] p-4 md:p-6 lg:p-8'>
+        <div className='flex flex-col gap-[24px] md:gap-[32px] pt-[16px] md:pt-[24px] pr-[16px] md:pr-[32px] pl-[16px] md:pl-[32px] pb-[16px] md:pb-[24px]'>
           <div className='flex flex-col gap-[32px] '>
             {/* Heading and description */}
             <div className='flex flex-col gap-[8px] lg:gap-[12px]'>

@@ -28,7 +28,7 @@ const Notificationpref = () => {
   }
 
   return (
-    <div className="flex min-h-screen bg-[#F9FAFB] overflow-x-hidden">
+    <div className='flex w-full min-h-screen bg-[#F9FAFB]'>
 
       {/* Sidebar on mobile*/}
       <div className={`fixed h-screen z-20 transition-transform duration-300 ${
@@ -46,13 +46,13 @@ const Notificationpref = () => {
       )}
 
       {/* Main Content */}
-      <div className="flex-1 w-full min-w-0">
+      <div className='flex-1 min-w-0  h-screen overflow-y-auto'>
 
         <Navbar 
           onMobileMenuClick={() => setIsSidebarOpen(!isSidebarOpen)}
         />
 
-        <div className="flex flex-col gap-6 p-4 md:p-6 lg:p-8">
+        <div className='flex flex-col gap-[24px] md:gap-[32px] pt-[16px] md:pt-[24px] pr-[16px] md:pr-[32px] pl-[16px] md:pl-[32px] pb-[16px] md:pb-[24px]'>
 
           <div className="flex flex-col gap-6">
             {/* Heading and description */}
