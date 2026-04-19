@@ -1,6 +1,6 @@
 import React from 'react'
 import toast, { Toaster } from 'react-hot-toast';
-import Live from '../../assets/WebinarSection/Live.png'
+import Live from '../../assets/WebinarSection/Live.jpg'
 import Liveprof from '../../assets/WebinarSection/Liveprof.png'
 import webIcon from '../../assets/WebinarData/webIcon.svg'
 import WebTime from '../../assets/WebinarData/WebTime.svg'
