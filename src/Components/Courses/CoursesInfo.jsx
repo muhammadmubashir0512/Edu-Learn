@@ -13,6 +13,7 @@ import resources from '../../assets/Courseinfo/resources.png'
 import rating from '../../assets/Courseinfo/rating.png'
 import user from '../../assets/Courseinfo/user.png'
 import playtag from '../../assets/Courseinfo/playtag.png'
+import { allCoursesData } from './coursesData'
 
 const Courses = () => {
 
@@ -20,8 +21,7 @@ const Courses = () => {
     const {id} = useParams()
     const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
-    const allCourses = JSON.parse(localStorage.getItem("AllCourses")) || []
-    const course = allCourses.find(c => c.id === parseInt(id))
+    const course = allCoursesData.find(c => c.id === parseInt(id))
 
     const included = [
         {img: certificate, tag: "Certificate of Completion"},
