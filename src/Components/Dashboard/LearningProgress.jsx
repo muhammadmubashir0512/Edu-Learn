@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Htmlcourse from '../../assets/LearningProgess/Htmlcourse.png'
 import MachineLearn from '../../assets/LearningProgess/MachineLearn.png'
 import Mobile from '../../assets/LearningProgess/Mobile.png'
-import UIUX from '../../assets/LearningProgess/UIUX.png'
+import Live from '../../assets/LearningProgess/Live.png'
 import video from "../../assets/LearningProgess/video.jpg"
 import CourseInfo from '../Courses/CoursesInfo'
 import { useNavigate } from 'react-router-dom'
@@ -20,7 +20,7 @@ const LearningProgress = (props) => {
 
   const data = [
     {id: 1, vid:video,  icon: Htmlcourse, title: "HTML & CSS Basics", instructor: "Dr. Alex Thompson", datejoin: "30 Aug 2025", progress: "8/10", percent: "80%", status: "Paid"},
-    {id: 2, vid:video, icon: UIUX, title: "Ui/Ux Principles", instructor: "Mr Andrew", datejoin: "30 Aug 2025", progress: "6/10", percent: "60%", status: "Free"},
+    {id: 2, vid:video, icon: Live, title: "Ui/Ux Principles", instructor: "Mr Andrew", datejoin: "30 Aug 2025", progress: "6/10", percent: "60%", status: "Free"},
     {id: 3, vid:video, icon: Mobile, title: "Mobile Development", instructor: "Mr John Ex", datejoin: "30 Aug 2025", progress: "4/10", percent: "40%", status: "Paid"},
     {id: 4, vid:video, icon: MachineLearn, title: "Machine Learning", instructor: "Mrs Alya", datejoin: "30 Aug 2025", progress: "9/10", percent: "90%", status: "Free"},
   ]

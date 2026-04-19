@@ -112,7 +112,7 @@ const RecomendedCourses = (props) => {
                     {/* Enroll Button */}
                     <button 
                       onClick={()=>{
-                        AddCourse(course),
+                        AddCourse(course);
                         course.price === "Free" 
                           ? navigate(`/CourseInfo/${course.id}`) 
                           : toast.error(`Subscribe to access Course ${course.title}`)
