@@ -42,7 +42,7 @@ const Settings = () => {
       )}
 
       {/* Main Content */}
-      <div className="flex-1 w-full min-w-0 lg:ml-[275px]">
+      <div className="flex-1 w-full min-w-0 ">
 
         <Navbar 
           onMobileMenuClick={() => setIsSidebarOpen(!isSidebarOpen)}

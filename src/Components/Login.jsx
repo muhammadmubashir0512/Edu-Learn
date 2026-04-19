@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import SidebarNav from '../assets/SidebarNav.png'
+import SidebarNav from '../assets/SidebarNav.jpg'
 import { toast, Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
 import { useState } from "react";

@@ -3,7 +3,7 @@ import Activecourse from '../../assets/Welcome/Activecourse.png'
 import Completecourse from '../../assets/Welcome/Completecourse.png'
 import Webinars from '../../assets/Welcome/Webinars.png'
 import Analytics from '../../assets/Welcome/Analytics.png'
-import sample from '../../assets/Welcome/sample.png'
+import sample from '../../assets/Welcome/sample.jpg'
 
 
 const Welcomenote = () => {
